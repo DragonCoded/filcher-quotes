@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filcher's Shop</title>
 
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-  }
+  <style>
+    body {
+      background-color: transparent;
+      color: #c9b58b;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      font-style: italic;
+      text-align: center;
+      margin: 8px;
+    }
 
-  body {
-    color: #33251d;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-    text-align: center;
-  }
-
-  #quote {
-    margin: 4px;
-    padding: 4px;
-    line-height: 1.4;
-  }
-</style>
+    #quote {
+      line-height: 1.5;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="quote"></div>
 
-<p id="quote">Good evening, my dear. Do come in.</p>
+  <script>
+    const quotes = [
+      "Some things are difficult to find. Others are difficult to explain. I specialize in both.",
+      "I find discretion to be a most valuable commodity. Fortunately, I deal in those as well.",
+      "One must maintain standards, even in the most unconventional of establishments.",
+      "The finest goods are never displayed in the finest shops.",
+      "Word travels quickly, I find. Though not nearly as quickly as I can disappear.",
+      "It's not much to look at, I grant you, but one shouldn't judge an establishment by its address.",
+      "I prefer the term independent acquisitions specialist.",
+      "A respectable selection of rather unconventional goods. I trust you'll find something to your liking.",
+      "My dear fellow, I assure you that everything is quite in order.",
+      "Some treasures are hidden. Others are merely waiting for the right person to acquire them."
+    ];
 
-<script>
-const quotes = [
-  "Some things are difficult to find. Others are difficult to explain. I specialize in both.",
-  "I find discretion to be a most valuable commodity. Fortunately, I deal in those as well.",
-  "One must maintain standards, even in the most unconventional of establishments.",
-  "The finest goods are never displayed in the finest shops.",
-  "Word travels quickly, I find. Though not nearly as quickly as I can disappear.",
-  "It's not much to look at, I grant you, but one shouldn't judge an establishment by its address.",
-  "I prefer the term independent acquisitions specialist.",
-  "A respectable selection of rather unconventional goods. I trust you'll find something to your liking.",
-  "My dear fellow, I assure you that everything is quite in order.",
-  "Some treasures are hidden. Others are merely waiting for the right person to acquire them."
-];
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
-const selectedQuote =
-  quotes[Math.floor(Math.random() * quotes.length)];
-
-document.getElementById("quote").textContent =
-  "\u201c" + selectedQuote + "\u201d";
-</script>
-
+    document.getElementById("quote").textContent = quote;
+  </script>
 </body>
 </html>
